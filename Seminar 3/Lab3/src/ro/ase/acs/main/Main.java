@@ -21,8 +21,8 @@ public class Main {
 			Car c2;
 			try {
 				c2 = (Car)car.clone();
-				c2.setCapacity(1900);
-				System.out.println(car.getCapacity());
+				c2.setCarCapacity(1900);
+				System.out.println(car.getCarCapacity());
 			} catch (CloneNotSupportedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

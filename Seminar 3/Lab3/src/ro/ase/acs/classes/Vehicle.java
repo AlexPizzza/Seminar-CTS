@@ -17,10 +17,6 @@ public abstract class Vehicle implements Cloneable {
 	public String getName() {
 		return name;
 	}
-
-	public int getSpeed() {
-		return speed;
-	}
 	
 	@Override
 	public Object clone() throws CloneNotSupportedException {
