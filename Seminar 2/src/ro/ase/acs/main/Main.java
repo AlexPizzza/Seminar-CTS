@@ -1,7 +1,5 @@
 package ro.ase.acs.main;
 
-import java.lang.reflect.InvocationTargetException;
-
 import ro.ase.acs.contracts.Readable;
 import ro.ase.acs.contracts.Writeable;
 import ro.ase.acs.readers.Reader;
@@ -15,9 +13,8 @@ public class Main {
 	
 		Orchestrator orchestrator = null;
 		try {
-			orchestrator = new Orchestrator(ioc.resolve(Readable.class).getConstructor().newInstance(), ioc.resolve(Writeable.class).getConstructor().newInstance());
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
-				| NoSuchMethodException | SecurityException e) {
+			orchestrator = new Orchestrator(ioc.resolve(Readable.class), ioc.resolve(Writeable.class));
+		} catch (IllegalArgumentException | SecurityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
